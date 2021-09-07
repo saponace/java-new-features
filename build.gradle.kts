@@ -10,6 +10,13 @@ tasks.withType<JavaCompile> {
     options.compilerArgs.add("--enable-preview")
 }
 
+//Java 9
+tasks.register<JavaExec>("DemoPrivateMethodInInterface") {
+    dependsOn("classes")
+    jvmArgs("--enable-preview")
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("j9.DemoPrivateMethodInInterface")
+}
 
 tasks.register<JavaExec>("DemoNPEBetterErrorMsg") {
     dependsOn("classes")
