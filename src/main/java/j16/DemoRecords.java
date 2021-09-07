@@ -2,7 +2,7 @@ package j16;
 
 import java.util.Objects;
 
-public class HelloRecords {
+public class DemoRecords {
 
     // fancy immutable data class
     record Point(int x, int y) { }

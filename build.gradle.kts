@@ -6,28 +6,29 @@ application {
     mainClass.set("HelloRecords")
 }
 
-/*
 tasks.withType<JavaCompile> {
     options.compilerArgs.add("--enable-preview")
 }
- */
 
-tasks.register<JavaExec>("HelloRecords") {
+
+tasks.register<JavaExec>("DemoNPEBetterErrorMsg") {
     dependsOn("classes")
+    jvmArgs("--enable-preview")
     classpath = sourceSets["main"].runtimeClasspath
-    mainClass.set("HelloRecords")
+    mainClass.set("j15.DemoNPEBetterErrorMsg")
 }
 
-tasks.register<JavaExec>("HelloSum") {
+tasks.register<JavaExec>("DemoRecords") {
     dependsOn("classes")
-    //jvmArgs("--enable-preview")
+    jvmArgs("--enable-preview")
     classpath = sourceSets["main"].runtimeClasspath
-    mainClass.set("HelloSum")
+    mainClass.set("j16.DemoRecords")
 }
 
-tasks.register<JavaExec>("HelloNullHelp") {
+tasks.register<JavaExec>("DemoSealedInterface") {
     dependsOn("classes")
-    //jvmArgs("--enable-preview")
+    jvmArgs("--enable-preview")
     classpath = sourceSets["main"].runtimeClasspath
-    mainClass.set("HelloNullHelp")
+    mainClass.set("j16.DemoSealedInterface")
 }
+

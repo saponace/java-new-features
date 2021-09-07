@@ -2,9 +2,9 @@ package j15;
 
 import java.util.Set;
 
-public class HelloNullHelp {
+public class DemoNPEBetterErrorMsg {
 
-    record Pants(String s) { }
+    record Pants(String color) { }
     record Referee(Pants pants) { }
     record Game(Referee referee) { }
 
@@ -15,6 +15,6 @@ public class HelloNullHelp {
 
         var games = Set.of(game1, game2);
 
-        games.forEach(it -> System.out.println(it.referee.pants.s));
+        games.forEach(it -> System.out.println(it.referee.pants.color));
     }
 }

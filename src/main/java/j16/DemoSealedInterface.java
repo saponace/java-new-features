@@ -1,6 +1,6 @@
 package j16;
 
-public class HelloSealed {
+public class DemoSealedInterface {
 
     sealed interface Robot
             permits Vacuum, SnowBlower, LawnMower { }
