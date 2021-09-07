@@ -18,6 +18,13 @@ tasks.register<JavaExec>("DemoPrivateMethodInInterface") {
     mainClass.set("j9.DemoPrivateMethodInInterface")
 }
 
+tasks.register<JavaExec>("DemoDiamondOperatorForAnonymousInnerClasses") {
+    dependsOn("classes")
+    jvmArgs("--enable-preview")
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("j9.DemoDiamondOperatorForAnonymousInnerClasses")
+}
+
 tasks.register<JavaExec>("DemoNPEBetterErrorMsg") {
     dependsOn("classes")
     jvmArgs("--enable-preview")
