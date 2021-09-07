@@ -78,6 +78,13 @@ tasks.register<JavaExec>("DemoTextBlock") {
 }
 
 // Java 16
+tasks.register<JavaExec>("DemoInstanceofPatternMatching") {
+    dependsOn("classes")
+    jvmArgs("--enable-preview")
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("j16.DemoInstanceofPatternMatching")
+}
+
 tasks.register<JavaExec>("DemoRecords") {
     dependsOn("classes")
     jvmArgs("--enable-preview")
