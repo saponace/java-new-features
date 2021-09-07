@@ -39,6 +39,13 @@ tasks.register<JavaExec>("DemoNewOptionalMethods") {
     mainClass.set("j9.DemoNewOptionalMethods")
 }
 
+tasks.register<JavaExec>("DemoCollectionFactoryMethods") {
+    dependsOn("classes")
+    jvmArgs("--enable-preview")
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("j9.DemoCollectionFactoryMethods")
+}
+
 // Java 15
 tasks.register<JavaExec>("DemoNPEBetterErrorMsg") {
     dependsOn("classes")
