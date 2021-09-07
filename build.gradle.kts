@@ -70,6 +70,13 @@ tasks.register<JavaExec>("DemoNPEBetterErrorMsg") {
     mainClass.set("j15.DemoNPEBetterErrorMsg")
 }
 
+tasks.register<JavaExec>("DemoTextBlock") {
+    dependsOn("classes")
+    jvmArgs("--enable-preview")
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("j15.DemoTextBlock")
+}
+
 // Java 16
 tasks.register<JavaExec>("DemoRecords") {
     dependsOn("classes")
