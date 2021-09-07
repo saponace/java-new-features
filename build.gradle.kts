@@ -46,6 +46,15 @@ tasks.register<JavaExec>("DemoCollectionFactoryMethods") {
     mainClass.set("j9.DemoCollectionFactoryMethods")
 }
 
+// Java 10
+tasks.register<JavaExec>("DemoLocalTypeInference") {
+    dependsOn("classes")
+    jvmArgs("--enable-preview")
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("j10.DemoLocalTypeInference")
+}
+
+
 // Java 15
 tasks.register<JavaExec>("DemoNPEBetterErrorMsg") {
     dependsOn("classes")
