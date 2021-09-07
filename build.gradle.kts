@@ -10,7 +10,7 @@ tasks.withType<JavaCompile> {
     options.compilerArgs.add("--enable-preview")
 }
 
-//Java 9
+// Java 9
 tasks.register<JavaExec>("DemoPrivateMethodInInterface") {
     dependsOn("classes")
     jvmArgs("--enable-preview")
@@ -25,6 +25,14 @@ tasks.register<JavaExec>("DemoDiamondOperatorForAnonymousInnerClasses") {
     mainClass.set("j9.DemoDiamondOperatorForAnonymousInnerClasses")
 }
 
+tasks.register<JavaExec>("DemoNewTryWithResources") {
+    dependsOn("classes")
+    jvmArgs("--enable-preview")
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("j9.DemoNewTryWithResources")
+}
+
+// Java 15
 tasks.register<JavaExec>("DemoNPEBetterErrorMsg") {
     dependsOn("classes")
     jvmArgs("--enable-preview")
@@ -32,6 +40,7 @@ tasks.register<JavaExec>("DemoNPEBetterErrorMsg") {
     mainClass.set("j15.DemoNPEBetterErrorMsg")
 }
 
+// Java 15
 tasks.register<JavaExec>("DemoRecords") {
     dependsOn("classes")
     jvmArgs("--enable-preview")
