@@ -54,6 +54,13 @@ tasks.register<JavaExec>("DemoLocalTypeInference") {
     mainClass.set("j10.DemoLocalTypeInference")
 }
 
+// Java 14
+tasks.register<JavaExec>("DemoSwitchExpressions") {
+    dependsOn("classes")
+    jvmArgs("--enable-preview")
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("j14.DemoSwitchExpressions")
+}
 
 // Java 15
 tasks.register<JavaExec>("DemoNPEBetterErrorMsg") {
@@ -63,7 +70,7 @@ tasks.register<JavaExec>("DemoNPEBetterErrorMsg") {
     mainClass.set("j15.DemoNPEBetterErrorMsg")
 }
 
-// Java 15
+// Java 16
 tasks.register<JavaExec>("DemoRecords") {
     dependsOn("classes")
     jvmArgs("--enable-preview")
