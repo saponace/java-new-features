@@ -1,21 +1,13 @@
 package j16;
 
-import java.util.Objects;
-
 public class DemoRecords {
-
-    // fancy immutable data class
-    record Point(int x, int y) { }
+    record Point(int x, int y) {}
 
     public static void main(String[] args) {
         // fancy type inference
         var point = new Point(1, 2);
 
-        // fancy text block!
-        System.out.printf("""
-                x = %s
-                y = %s
-                """, point.x() ,point.y());
+        System.out.println("x = " + point.x() + ", y = " + point.y() + "");
 
         var points = new Point[] {point, point};
     }

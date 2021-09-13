@@ -1,7 +1,5 @@
 package j14;
 
-import java.util.Arrays;
-
 public class DemoSwitchExpressions {
     public static String multiSwitch(int day) {
         return switch (day) {

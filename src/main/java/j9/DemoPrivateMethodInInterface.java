@@ -1,7 +1,6 @@
 package j9;
 
 interface InterfaceWithPrivateMethods {
-
     void mul(int a, int b);
 
     default void add(int a, int b) {
