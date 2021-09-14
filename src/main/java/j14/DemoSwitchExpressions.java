@@ -19,6 +19,19 @@ public class DemoSwitchExpressions {
         );
     }
 
+    public static void oldStyleSwitchExpression(int v) {
+        System.out.println( "number is :" +
+                switch (v) {
+                    case  1:
+                        yield "one";
+                    case  2:
+                        yield "two";
+                    default:
+                        yield "many";
+                }
+        );
+    }
+
     public static void main(String[] args) {
         System.out.println(multiSwitch(1));
         switchExpression(2);
