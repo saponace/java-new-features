@@ -1,4 +1,4 @@
-package j16;
+package j17;
 
 public class DemoSealedInterface {
 
