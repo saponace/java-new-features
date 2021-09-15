@@ -15,10 +15,6 @@ class DemoNullSafety {
         val length2 = input?.length ?: 0
         println("length2: $length2")
     }
-
-    fun stringInterpolation(name: String) {
-        println("Hello $name")
-    }
 }
 
 fun main() {
@@ -28,6 +24,4 @@ fun main() {
 
     demo.nullChecks("coucou")
     demo.nullChecks(null)
-
-    demo.stringInterpolation("yoyo")
 }

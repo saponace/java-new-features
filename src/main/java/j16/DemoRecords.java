@@ -11,5 +11,4 @@ public class DemoRecords {
 
         var points = new Point[] {point, point};
     }
-
 }
