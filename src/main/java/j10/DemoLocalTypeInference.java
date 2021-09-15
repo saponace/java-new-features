@@ -13,8 +13,6 @@ public class DemoLocalTypeInference {
         System.out.println("Type of b: " + ((Object) b).getClass().getName());
 
 //        b = "yoyo";
-
-//        var c = new ArrayList<>;
     }
 
     private static void testLocalTypeInferenceInLambdas() {
