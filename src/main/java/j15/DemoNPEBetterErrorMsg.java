@@ -15,6 +15,6 @@ public class DemoNPEBetterErrorMsg {
 
         var games = Set.of(game1, game2);
 
-        games.forEach(it -> System.out.println(it.referee.pants.color));
+        games.forEach(g -> System.out.println(g.referee.pants.color));
     }
 }
